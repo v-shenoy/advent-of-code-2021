@@ -19,4 +19,6 @@ Input for the day is in the `data.txt` file under the same directory.
 $ cd day_XX
 $ python a.py
 $ python b.py
-```
+``` 
+
+> **Note:** You might require Python _v3.10.8_.
