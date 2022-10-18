@@ -16,7 +16,7 @@ Input for the day is in the `data.txt` file under the same directory.
 **Running them is as simple as -**
 
 ```bash
-$ cd dayXX
+$ cd day_XX
 $ python a.py
 $ python b.py
 ```
