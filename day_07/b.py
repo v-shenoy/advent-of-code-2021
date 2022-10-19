@@ -16,4 +16,4 @@ if __name__ == "__main__":
 
     leftmost, rightmost = min(data), max(data)
     ans = min(sum(dist(pos, target_pos) for pos in data) for target_pos in range(leftmost, rightmost + 1))
-    print(f"Ans - {ans}, Time - {time.time() - t}s")
+    print(f"Ans - {ans}, Time - {(time.time() - t) * 1000}ms")

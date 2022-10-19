@@ -33,4 +33,4 @@ if __name__ == "__main__":
         col += 1
     co2 = int(data_co2[0], 2)
 
-    print(f"Ans - {o2 * co2}, Time - {time.time() - t}s")
+    print(f"Ans - {o2 * co2}, Time - {(time.time() - t) * 1000}ms")

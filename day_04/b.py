@@ -45,7 +45,7 @@ class Board:
 
 
 if __name__ == "__main__":
-    t = time.time()
+    t_start = time.time()
     with open("inputs/04.txt") as f:
         data = list(filter(lambda line: line.strip(), f))
 
@@ -59,7 +59,7 @@ if __name__ == "__main__":
             if board.has_won():
                 if len(boards) == 1:
                     ans = board.score() * num
-                    print(f"Ans - {ans}, Time - {time.time() - t}s")
+                    print(f"Ans - {ans}, Time - {(time.time() - t_start) * 1000}ms")
                     sys.exit(0)
             else:
                 new_boards.append(board)

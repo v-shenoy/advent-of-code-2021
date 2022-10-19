@@ -28,7 +28,7 @@ def count_paths(graph, curr, visited):
 
 
 if __name__ == "__main__":
-    t = time.time()
+    t_start = time.time()
     graph = defaultdict(list)
     with open("inputs/12.txt") as f:
         for line in f:
@@ -37,4 +37,4 @@ if __name__ == "__main__":
             graph[v].append(u)
 
     count_paths(graph, "start", defaultdict(bool))
-    print(f"Ans - {ans}, Time - {time.time() - t}s")
+    print(f"Ans - {ans}, Time - {(time.time() - t_start) * 1000}ms")

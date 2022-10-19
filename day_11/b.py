@@ -26,7 +26,7 @@ def flash(energy, n_rows, n_cols, x, y, flashed):
 
 
 if __name__ == "__main__":
-    t = time.time()
+    t_start = time.time()
     with open("inputs/11.txt") as f:
         energy = [[int(c) for c in line.strip()] for line in f]
         
@@ -42,4 +42,4 @@ if __name__ == "__main__":
             for y in range(n_cols):
                 if energy[x][y] > 9:
                     flash(energy, n_rows, n_cols, x, y, flashed)
-    print(f"Ans - {n_steps}, Time - {time.time() - t}s")
+    print(f"Ans - {n_steps}, Time - {(time.time() - t_start) * 1000}ms")

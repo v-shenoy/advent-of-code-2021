@@ -4,7 +4,7 @@ import time
 
 
 if __name__ == "__main__":
-    t = time.time()
+    t_start = time.time()
     x, y = 0, 0
     with open("inputs/02.txt") as f:
         for line in f:
@@ -15,4 +15,4 @@ if __name__ == "__main__":
                     y += int(Y)
                 case ["up", Y]:
                     y -= int(Y)
-    print(f"Ans - {x * y}, Time - {time.time() - t}s")
+    print(f"Ans - {x * y}, Time - {(time.time() - t_start) * 1000}ms")

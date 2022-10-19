@@ -9,7 +9,7 @@ import time
 
 
 if __name__ == "__main__":
-    time_start = time.time()
+    t_start = time.time()
     with open("inputs/06.txt") as f: 
         data = map(int, f.readline().split(","))
     
@@ -29,4 +29,4 @@ if __name__ == "__main__":
         
         n_days -= 1
 
-    print(f"Ans - {sum(timers.values())}, Time - {time.time() - time_start}s")
+    print(f"Ans - {sum(timers.values())}, Time - {(time.time() - t_start) * 1000}ms")

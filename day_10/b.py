@@ -7,7 +7,7 @@ import statistics
 
 
 if __name__ == "__main__":
-    t = time.time()
+    t_start = time.time()
     opening = ["(", "{", "[", "<"]
     points = {")": 1, "]": 2, "}": 3, ">": 4}
     opening_to_closing = {"(": ")", "[": "]", "{": "}", "<": ">"}
@@ -30,4 +30,4 @@ if __name__ == "__main__":
                     ans = 5 * ans + points[opening_to_closing[stack.pop()]]
                 scores.append(ans)
 
-    print(f"Ans - {statistics.median(scores)}, Time - {time.time() - t}s")
+    print(f"Ans - {statistics.median(scores)}, Time - {(time.time() - t_start) * 1000}ms")

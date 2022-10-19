@@ -14,6 +14,8 @@
 # The reason I had couldn't have a single method where a non-terminal special lowercase node would be visited 0, 1, or 2 times is
 # When we call this method while iterating over non-terminal lowercase nodes, we would overcount the paths where every node
 # occurs at most once.
+# 
+# However, this does visit some paths multiple times while computing (we don't count them, but still), so it's not optimal.
 import time
 from collections import defaultdict
 
@@ -62,7 +64,7 @@ def visit_exactly_twice(graph, curr, special, count, visited):
 
 
 if __name__ == "__main__":
-    t = time.time()
+    t_start = time.time()
     graph = defaultdict(list)
     with open("inputs/12.txt") as f:
         for line in f:
@@ -73,4 +75,4 @@ if __name__ == "__main__":
     visit_atmost_once(graph, "start", defaultdict(bool))
     for v in filter(lambda v: v.islower() and not (v == "start" or v == "end"), graph):
         visit_exactly_twice(graph, "start", v, 2, defaultdict(bool))
-    print(f"Ans - {ans}, Time - {time.time() - t}s")
+    print(f"Ans - {ans}, Time - {(time.time() - t_start) * 1000}ms")
