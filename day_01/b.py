@@ -1,8 +1,8 @@
 # For consecutive sliding windows, one might calculate the sum of the three 
 # elements in the first window, then calculate the sum of three elements in 
 # the next window, and compare them. 
-# However, consider a porition of list [... a, b, c, d, ...]
-# We can see that a + b + c < b + c + d <=> a < d
+# However, consider a portion of list [... a, b, c, d, ...]
+# We can see that a + b + c < b + c + d <==> a < d
 # So we need to compare only the fourth element.
 import time
 
