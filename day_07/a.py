@@ -54,7 +54,7 @@ def standard_lib(data):
 
 
 if __name__ == "__main__":
-    with open("data.txt") as f:
+    with open("inputs/07.txt") as f:
         data = list(map(int, f.readline().split(","))) 
   
     naive(data)

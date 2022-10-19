@@ -1,22 +1,26 @@
 # Literally no change from part A, except n_days.
-from collections import defaultdict
+import time
+
 
 if __name__ == "__main__":
-    with open("data.txt") as f: 
+    time_start = time.time()
+    with open("inputs/06.txt") as f: 
         data = map(int, f.readline().split(","))
     
     n_days = 256
     reset_timer, new_timer = 6, 8
-    fish_counts = {timer: 0 for timer in range(new_timer + 1)}
-    for timer in data:
-        fish_counts[timer] += 1
+    timers = {t: 0 for t in range(new_timer + 1)}
+    for t in data:
+        timers[t] += 1
 
     while n_days > 0:
-        new_fishes = fish_counts[0]
-        fish_counts = {timer - 1: fish_counts[timer] for timer in range(1, new_timer + 1)}
-        fish_counts[reset_timer] += new_fishes
-        fish_counts[new_timer] = new_fishes
+        new_fishes = timers[0]
+        
+        timers = {t - 1: timers[t] for t in range(1, new_timer + 1)}
+        
+        timers[reset_timer] += new_fishes
+        timers[new_timer] = new_fishes
         
         n_days -= 1
 
-    print(sum(fish_counts.values()))
+    print(f"Ans - {sum(timers.values())}, Time - {time.time() - time_start}s")

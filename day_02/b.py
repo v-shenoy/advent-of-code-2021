@@ -6,7 +6,7 @@ import time
 if __name__ == "__main__":
     t = time.time()
     x, y, a = 0, 0, 0
-    with open("data.txt") as f:
+    with open("inputs/02.txt") as f:
         for line in f:
             match line.split(" "):
                 case ["forward", X]:

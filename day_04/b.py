@@ -46,7 +46,7 @@ class Board:
 
 if __name__ == "__main__":
     t = time.time()
-    with open("data.txt") as f:
+    with open("inputs/04.txt") as f:
         data = list(filter(lambda line: line.strip(), f))
 
         called_numbers = [int(num) for num in data[0].split(",")]

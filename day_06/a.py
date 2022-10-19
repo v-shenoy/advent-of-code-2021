@@ -10,10 +10,10 @@ import time
 
 if __name__ == "__main__":
     time_start = time.time()
-    with open("data.txt") as f: 
+    with open("inputs/06.txt") as f: 
         data = map(int, f.readline().split(","))
     
-    n_days = 256
+    n_days = 80
     reset_timer, new_timer = 6, 8
     timers = {t: 0 for t in range(new_timer + 1)}
     for t in data:

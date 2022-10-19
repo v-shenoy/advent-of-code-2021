@@ -6,7 +6,7 @@ import time
 
 if __name__ == "__main__":
     t = time.time()
-    with open("data.txt") as f:
+    with open("inputs/03.txt") as f:
         data = [line.strip() for line in f]
     
     gamma, epsilon = "", ""

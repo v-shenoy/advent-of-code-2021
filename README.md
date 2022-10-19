@@ -11,15 +11,20 @@ restrict myself to the standard library for the most part.
 ## Solutions 
 
 Each day's solution is in its own folder. Solutions for part A, B are independent and in their own files named `a.py` and `b.py` respectively.
-Input for the day is in the `data.txt` file under the same directory.
+Input for the day_XX is in the `XX.txt` file under the `inputs`` directory.
 
 **Running them is as simple as -**
 
 ```bash
-$ cd day_XX
-$ python a.py
-$ python b.py
+$ python day_XX/a.py
+$ python day_XX/b.py
 ``` 
+
+Or, if you have [just](https://github.com/casey/just) installed 
+
+```bash
+$ just run XX
+```
 
 > **Note:** You might require Python _v3.10.8_.
 

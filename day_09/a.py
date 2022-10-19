@@ -18,7 +18,7 @@ def find_low_points(cave, n_rows, n_cols):
 
 if __name__ == "__main__":
     t = time.time()
-    with open("data.txt") as f:
+    with open("inputs/09.txt") as f:
         cave = [[int(c) for c in line.strip()] for line in f]
     
     n_rows, n_cols = len(cave), len(cave[0])

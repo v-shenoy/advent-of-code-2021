@@ -11,7 +11,7 @@ def dist(x, y):
 
 if __name__ == "__main__":
     t = time.time()
-    with open("data.txt") as f:
+    with open("inputs/07.txt") as f:
         data = list(map(int, f.readline().split(",")))
 
     leftmost, rightmost = min(data), max(data)
