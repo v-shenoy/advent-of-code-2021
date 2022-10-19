@@ -1,6 +1,6 @@
 # Whenever an octopush is flashed, it's energy changes to 0.
 # While there are any octopuses with non-zero energy, we keep performing
-# transition and flashing octopuses.
+# transition and flashing octopuses as described in Part A.
 import time
 import itertools
 from itertools import chain

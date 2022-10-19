@@ -13,16 +13,20 @@ def get_neighbour_indices(n_rows, n_cols, x, y):
         (p[0] == x and p[1] == y), neighbours)
 
 
-def flash(energy, n_rows, n_cols, x, y, flashed, ans):    
+n_flashes = 0
+def flash(energy, n_rows, n_cols, x, y, flashed):    
+    global n_flashes
+    
     flashed[x][y] = True
     energy[x][y] = 0
-    ans["flashes"] += 1
+    
+    n_flashes += 1
 
     for u, v in get_neighbour_indices(n_rows, n_cols, x, y):
         if not flashed[u][v]:
             energy[u][v] += 1
             if energy[u][v] > 9:
-                flash(energy, n_rows, n_cols, u, v, flashed, ans)
+                flash(energy, n_rows, n_cols, u, v, flashed)
 
 
 
@@ -41,8 +45,7 @@ if __name__ == "__main__":
         for x in range(n_rows):
             for y in range(n_cols):
                 if energy[x][y] > 9:
-                    flash(energy, n_rows, n_cols, x, y, flashed, ans)
+                    flash(energy, n_rows, n_cols, x, y, flashed)
         n_steps -= 1
 
-    n_flashes = ans["flashes"]
     print(f"Ans - {n_flashes}, Time - {time.time() - t}s")
