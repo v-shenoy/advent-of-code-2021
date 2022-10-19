@@ -22,3 +22,5 @@ $ python b.py
 ``` 
 
 > **Note:** You might require Python _v3.10.8_.
+
+Comments have been added in most places explaining the idea behind the solution.

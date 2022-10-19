@@ -1,4 +1,10 @@
+# No changes in the match-statement as the command syntax remains the same.
+# Only minor changes in the steps executed for each case.
+import time
+
+
 if __name__ == "__main__":
+    t = time.time()
     x, y, a = 0, 0, 0
     with open("data.txt") as f:
         for line in f:
@@ -10,4 +16,4 @@ if __name__ == "__main__":
                     a += int(A)
                 case ["up", A]:
                     a -= int(A)
-    print(x * y)
+    print(f"Ans - {x * y}, Time - {time.time() - t}s")

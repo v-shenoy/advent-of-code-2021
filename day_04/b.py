@@ -1,4 +1,8 @@
+# Very similar to Part A. We keep a list of uncompleted boards, 
+# and remove a board from it as soon as it has won until only 
+# one remains.
 import sys
+import time
 from dataclasses import dataclass
 from typing import List
 
@@ -41,6 +45,7 @@ class Board:
 
 
 if __name__ == "__main__":
+    t = time.time()
     with open("data.txt") as f:
         data = list(filter(lambda line: line.strip(), f))
 
@@ -53,7 +58,8 @@ if __name__ == "__main__":
             board.mark(num)
             if board.has_won():
                 if len(boards) == 1:
-                    print(board.score() * num)
+                    ans = board.score() * num
+                    print(f"Ans - {ans}, Time - {time.time() - t}s")
                     sys.exit(0)
             else:
                 new_boards.append(board)

@@ -1,4 +1,4 @@
-from cgitb import reset
+# Literally no change from part A, except n_days.
 from collections import defaultdict
 
 if __name__ == "__main__":

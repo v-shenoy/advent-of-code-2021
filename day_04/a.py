@@ -1,4 +1,11 @@
+# Simple data-classes to keep track of the Bingo board, and whether
+# a cell has been marked. Marking a new number, calculating if 
+# a board won, and computing the score are done through simple 
+# iterations / list comprehensions.
+# We simply iterate through the numbers being called out, and
+# marking numbers and checking we a board has won. 
 import sys
+import time
 from dataclasses import dataclass
 from typing import List
 
@@ -41,6 +48,7 @@ class Board:
 
 
 if __name__ == "__main__":
+    t = time.time()
     with open("data.txt") as f:
         data = list(filter(lambda line: line.strip(), f))
 
@@ -51,5 +59,6 @@ if __name__ == "__main__":
         for board in boards:
             board.mark(num)
             if board.has_won():
-                print(board.score() * num)
+                ans = board.score() * num
+                print(f"Ans - {ans}, Time - {time.time() - t}s")
                 sys.exit(0)
