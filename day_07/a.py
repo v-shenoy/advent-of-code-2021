@@ -57,6 +57,6 @@ if __name__ == "__main__":
     with open("inputs/07.txt") as f:
         data = list(map(int, f.readline().split(","))) 
   
-    naive(data)
-    optimized(data)
+    # naive(data)
+    # optimized(data)
     standard_lib(data)
