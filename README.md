@@ -20,6 +20,8 @@ Input for the day_XX is in the `XX.txt` file under the `inputs` directory.
 ```bash
 $ python day_XX/a.py
 $ python day_XX/b.py
+# or run them all
+$ bash run-all.sh
 ``` 
 
 Or, if you have [just](https://github.com/casey/just) installed 
@@ -29,3 +31,7 @@ $ just run XX
 ```
 
 > **Note:** You might require Python _v3.10.8_.
+
+## Acknowledgements
+
+Thanks to [Eric Wastl](https://github.com/topaz) for creating and managing the Advent of Code project.

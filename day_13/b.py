@@ -8,13 +8,13 @@ import time
 
 
 def fold(instr, points):
-    axis, val = instr.split(" ")[2].split("=")
-    is_horizontal_fold, val = (axis == "x"), int(val)
+    axis, k = instr.split(" ")[2].split("=")
+    k = int(k)
 
-    if is_horizontal_fold:
-        return {(2 * val - x, y) if x >= val else (x, y) for (x, y) in points}
+    if axis == "x":
+        return {(2 * k - x, y) if x >= k else (x, y) for (x, y) in points}
     else:
-        return {(x, 2 * val - y) if y >= val else (x, y) for (x, y) in points}   
+        return {(x, 2 * k - y) if y >= k else (x, y) for (x, y) in points}   
 
 
 if __name__ == "__main__":
@@ -33,12 +33,13 @@ if __name__ == "__main__":
     for instr in instrs:
         points = fold(instr, points)
 
-    x_max = max(x for (x, _) in points)
-    y_max = max(y for (_, y) in points)
+    x_max = max(points, key=lambda p: p[0])[0]
+    y_max = max(points, key=lambda p: p[1])[1]
 
     print("Ans - ")
     for y in range(y_max + 1):
         for x in range(x_max + 1):
+            # 9608 is the unicode code for █
             c = chr(9608) if (x, y) in points else " "
             print(c, end="")
         print("")

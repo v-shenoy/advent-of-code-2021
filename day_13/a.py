@@ -13,13 +13,13 @@ import time
 
 
 def fold(instr, points):
-    axis, val = instr.split(" ")[2].split("=")
-    is_horizontal_fold, val = (axis == "x"), int(val)
+    axis, k = instr.split(" ")[2].split("=")
+    k = int(k)
 
-    if is_horizontal_fold:
-        return {(2 * val - x, y) if x >= val else (x, y) for (x, y) in points}
+    if axis == "x":
+        return {(2 * k - x, y) if x >= k else (x, y) for (x, y) in points}
     else:
-        return {(x, 2 * val - y) if y >= val else (x, y) for (x, y) in points}   
+        return {(x, 2 * k - y) if y >= k else (x, y) for (x, y) in points}   
 
 
 if __name__ == "__main__":
