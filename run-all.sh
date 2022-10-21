@@ -1,8 +1,7 @@
 #!/usr/bin/env bash
 
-for file in $(find . -name "day_*" | sort) 
+for file in $(find . -name "*.py" | sort) 
 do
     echo $file
-    python "$file/a.py"
-    python "$file/b.py"
+    python $file
 done
