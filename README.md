@@ -12,14 +12,14 @@ I have also tried to add some basic comments explaining the approach in each pro
 
 ## Solutions 
 
-Each day's solution is in its own folder. Solutions for part A, B are independent and in their own files named `a.py` and `b.py` respectively.
+Each day's solution is in its own folder under `src`. Solutions for part A, B are independent and in their own files named `a.py` and `b.py` respectively.
 Input for the day_XX is in the `XX.txt` file under the `inputs` directory.
 
 **Running them is as simple as -**
 
 ```bash
-$ python day_XX/a.py
-$ python day_XX/b.py
+$ python src/day_XX/a.py
+$ python src/day_XX/b.py
 # or run them all
 $ bash run-all.sh
 ``` 
