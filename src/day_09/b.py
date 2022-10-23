@@ -37,7 +37,7 @@ def find_basins(cave, n_rows, n_cols, x, y, visited):
 
 
 if __name__ == "__main__":
-    t_start = time.time()
+    t_start = time.perf_counter()
     with open("inputs/09.txt") as f:
         cave = [[int(c) for c in line.strip()] for line in f]
     
@@ -47,4 +47,4 @@ if __name__ == "__main__":
         for x, y in find_low_points(cave, n_rows, n_cols))
     
     ans = prod(basins[-3:])
-    print(f"Ans - {ans}, Time - {(time.time() - t_start) * 1000}ms")
+    print(f"Ans - {ans}, Time - {(time.perf_counter() - t_start) * 1000}ms")

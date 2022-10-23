@@ -25,9 +25,9 @@ def play_game(p1, s1, p2, s2):
 
 
 if __name__ == "__main__":
-    t_start = time.time()
+    t_start = time.perf_counter()
     with open("inputs/21.txt") as f:
         p1 = int(f.readline().split(":")[1])
         p2 = int(f.readline().split(":")[1])
 
-    print(f"Ans - {max(play_game(p1, 0, p2, 0))}, Time - {(time.time() - t_start) * 1000}ms")
+    print(f"Ans - {max(play_game(p1, 0, p2, 0))}, Time - {(time.perf_counter() - t_start) * 1000}ms")

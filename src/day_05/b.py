@@ -3,7 +3,7 @@ from collections import defaultdict
 
 
 if __name__ == "__main__":
-    t_start = time.time()
+    t_start = time.perf_counter()
     counts = defaultdict(int)
     with open("inputs/05.txt") as f:
         for line in f:
@@ -27,4 +27,4 @@ if __name__ == "__main__":
                     y += y_step
 
     ans = sum(v >= 2 for v in counts.values())
-    print(f"Ans - {ans}, Time - {(time.time() - t_start) * 1000}ms")
+    print(f"Ans - {ans}, Time - {(time.perf_counter() - t_start) * 1000}ms")

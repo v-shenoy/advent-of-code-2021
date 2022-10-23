@@ -15,7 +15,7 @@ def filter_for_column(data, n_rows, col, f):
 
 
 if __name__ == "__main__":
-    t = time.time()
+    t = time.perf_counter()
     with open("inputs/03.txt") as f:
         data = [line.strip() for line in f]
 
@@ -33,4 +33,4 @@ if __name__ == "__main__":
         col += 1
     co2 = int(data_co2[0], 2)
 
-    print(f"Ans - {o2 * co2}, Time - {(time.time() - t) * 1000}ms")
+    print(f"Ans - {o2 * co2}, Time - {(time.perf_counter() - t) * 1000}ms")

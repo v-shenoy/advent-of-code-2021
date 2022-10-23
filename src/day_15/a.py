@@ -29,9 +29,9 @@ def djikstra(cave, n_rows, n_cols):
 
 
 if __name__ == "__main__":
-    t_start = time.time()
+    t_start = time.perf_counter()
     with open("inputs/15.txt") as f:
         cave = [[int(c) for c in line.strip()] for line in f]
 
     n_rows, n_cols = len(cave), len(cave[0])
-    print(f"Ans - {djikstra(cave, n_rows, n_cols)}, Time - {(time.time() - t_start) * 1000}ms")
+    print(f"Ans - {djikstra(cave, n_rows, n_cols)}, Time - {(time.perf_counter() - t_start) * 1000}ms")

@@ -5,7 +5,7 @@ import time
 
 
 if __name__ == "__main__":
-    t_start = time.time()
+    t_start = time.perf_counter()
     with open("inputs/03.txt") as f:
         data = [line.strip() for line in f]
     
@@ -22,4 +22,4 @@ if __name__ == "__main__":
         for n_ones in n_ones_per_col])
 
     ans = int(gamma, 2) * int(epsilon, 2)
-    print(f"Ans - {ans}, Time - {(time.time() - t_start) * 1000}ms")
+    print(f"Ans - {ans}, Time - {(time.perf_counter() - t_start) * 1000}ms")

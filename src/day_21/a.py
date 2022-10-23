@@ -13,7 +13,7 @@ def roll(pos, score, die):
 
 
 if __name__ == "__main__":
-    t_start = time.time()
+    t_start = time.perf_counter()
     with open("inputs/21.txt") as f:
         p1 = int(f.readline().split(":")[1])
         p2 = int(f.readline().split(":")[1])
@@ -35,4 +35,4 @@ if __name__ == "__main__":
             ans = s1 * count
             break
 
-    print(f"Ans - {ans}, Time - {(time.time() - t_start) * 1000}ms")
+    print(f"Ans - {ans}, Time - {(time.perf_counter() - t_start) * 1000}ms")

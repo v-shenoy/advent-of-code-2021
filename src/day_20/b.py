@@ -31,7 +31,7 @@ def enhance(old_image, n_rows, n_cols, algo, padding):
 
 
 if __name__ == "__main__":
-    t_start = time.time()
+    t_start = time.perf_counter()
     with open("inputs/20.txt") as f:
         algo = [int(c == "#") for c in f.readline().strip()]
         next(f)
@@ -45,4 +45,4 @@ if __name__ == "__main__":
         n_steps -= 1
 
     ans =  sum(sum(row) for row in image)
-    print(f"Ans - {ans}, Time - {(time.time() - t_start) * 1000}ms")
+    print(f"Ans - {ans}, Time - {(time.perf_counter() - t_start) * 1000}ms")

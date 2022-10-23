@@ -64,7 +64,7 @@ def visit_exactly_twice(graph, curr, special, count, visited):
 
 
 if __name__ == "__main__":
-    t_start = time.time()
+    t_start = time.perf_counter()
     graph = defaultdict(list)
     with open("inputs/12.txt") as f:
         for line in f:
@@ -75,4 +75,4 @@ if __name__ == "__main__":
     visit_atmost_once(graph, "start", defaultdict(bool))
     for v in filter(lambda v: v.islower() and not (v == "start" or v == "end"), graph):
         visit_exactly_twice(graph, "start", v, 2, defaultdict(bool))
-    print(f"Ans - {ans}, Time - {(time.time() - t_start) * 1000}ms")
+    print(f"Ans - {ans}, Time - {(time.perf_counter() - t_start) * 1000}ms")

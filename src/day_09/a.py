@@ -17,11 +17,11 @@ def find_low_points(cave, n_rows, n_cols):
 
 
 if __name__ == "__main__":
-    t_start = time.time()
+    t_start = time.perf_counter()
     with open("inputs/09.txt") as f:
         cave = [[int(c) for c in line.strip()] for line in f]
     
     n_rows, n_cols = len(cave), len(cave[0])
     ans = sum(1 + cave[x][y] for (x, y) in find_low_points(cave, n_rows, n_cols))
     
-    print(f"Ans - {ans}, Time - {(time.time() - t_start) * 1000}ms")
+    print(f"Ans - {ans}, Time - {(time.perf_counter() - t_start) * 1000}ms")

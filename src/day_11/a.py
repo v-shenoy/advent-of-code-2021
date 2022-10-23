@@ -31,7 +31,7 @@ def flash(energy, n_rows, n_cols, x, y, flashed):
 
 
 if __name__ == "__main__":
-    t_start = time.time()
+    t_start = time.perf_counter()
     with open("inputs/11.txt") as f:
         energy = [[int(c) for c in line.strip()] for line in f]
         
@@ -48,4 +48,4 @@ if __name__ == "__main__":
                     flash(energy, n_rows, n_cols, x, y, flashed)
         n_steps -= 1
 
-    print(f"Ans - {n_flashes}, Time - {(time.time() - t_start) * 1000}ms")
+    print(f"Ans - {n_flashes}, Time - {(time.perf_counter() - t_start) * 1000}ms")

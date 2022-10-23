@@ -109,11 +109,11 @@ def value(packet: Packet) -> int:
 
 
 if __name__ == "__main__":
-    t_start = time.time()
+    t_start = time.perf_counter()
     with open("inputs/16.txt") as f:
         line = f.readline().strip()
         bit_str = "".join(format(int(c, 16), "04b") for c in line)
 
 
     packet = parse_packet(bit_str, 0)
-    print(f"Ans - {value(packet)}, Time - {(time.time() - t_start) * 1000}ms")
+    print(f"Ans - {value(packet)}, Time - {(time.perf_counter() - t_start) * 1000}ms")

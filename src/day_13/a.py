@@ -23,7 +23,7 @@ def fold(instr, points):
 
 
 if __name__ == "__main__":
-    t_start = time.time()
+    t_start = time.perf_counter()
     
     points = set()
     with open("inputs/13.txt") as f:
@@ -36,4 +36,4 @@ if __name__ == "__main__":
         instr = f.readline()
     
     points = fold(instr, points)
-    print(f"Ans - {len(points)}, Time - {(time.time() - t_start) * 1000}ms")
+    print(f"Ans - {len(points)}, Time - {(time.perf_counter() - t_start) * 1000}ms")

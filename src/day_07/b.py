@@ -10,10 +10,10 @@ def dist(x, y):
 
 
 if __name__ == "__main__":
-    t = time.time()
+    t = time.perf_counter()
     with open("inputs/07.txt") as f:
         data = list(map(int, f.readline().split(",")))
 
     leftmost, rightmost = min(data), max(data)
     ans = min(sum(dist(pos, target_pos) for pos in data) for target_pos in range(leftmost, rightmost + 1))
-    print(f"Ans - {ans}, Time - {(time.time() - t) * 1000}ms")
+    print(f"Ans - {ans}, Time - {(time.perf_counter() - t) * 1000}ms")
