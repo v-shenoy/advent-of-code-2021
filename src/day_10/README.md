@@ -1,5 +1,5 @@
-**Link:** [Day 10](https://adventofcode.com/2021/day/10)  
-**Description:**
+### Link - [Day 10](https://adventofcode.com/2021/day/10)  
+### Description
 
 --- Day 10: Syntax Scoring ---  
 You ask the submarine to determine the best route out of the deep-sea cave, but it only replies:

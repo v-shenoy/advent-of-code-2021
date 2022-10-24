@@ -1,5 +1,5 @@
-**Link:** [Day 21](https://adventofcode.com/2021/day/21)
-**Description:**  
+### Link - [Day 21](https://adventofcode.com/2021/day/21)
+### Description  
 
 --- Day 21: Dirac Dice --- 
 

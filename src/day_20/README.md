@@ -1,5 +1,5 @@
-**Link:** [Day 20](https://adventofcode.com/2021/day/20)  
-**Description:** 
+### Link - [Day 20](https://adventofcode.com/2021/day/20)  
+### Description 
 
 --- Day 20: Trench Map ---
 With the scanners fully deployed, you turn their attention to mapping the floor of the ocean trench.

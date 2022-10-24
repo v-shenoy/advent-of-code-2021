@@ -1,5 +1,5 @@
-**Link:** [Day 08](https://adventofcode.com/2021/day/8)  
-**Description:**  
+### Link - [Day 08](https://adventofcode.com/2021/day/8)  
+### Description  
 
 --- Day 8: Seven Segment Search ---
 

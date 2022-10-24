@@ -1,5 +1,5 @@
-**Link:** [Day 22](https://adventofcode.com/2021/day/22)  
-**Description:**  
+### Link - [Day 22](https://adventofcode.com/2021/day/22)  
+### Description  
 
 --- Day 22: Reactor Reboot ---
 
