@@ -10,7 +10,7 @@ if __name__ == "__main__":
     t_start = time.perf_counter()
     
     ans = 0
-    unique_lens ={2, 4, 3, 7}
+    unique_lens = {2, 4, 3, 7}
     with open("inputs/08.txt") as f:
         for line in f:
             output = line.split("|")[1]
