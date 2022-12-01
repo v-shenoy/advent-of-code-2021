@@ -1,4 +1,4 @@
-# advent-of-code-2021
+# :christmas_tree:advent-of-code-2021
 
 ## Overview
 
